@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefaults">
+<meta name="description" content="&amp;lt;–! 之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserD">
 <meta name="keywords" content="ios">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于之前ios的面试">
 <meta property="og:url" content="http://yoursite.com/2017/06/24/ios面试后一点问题整理/index.html">
 <meta property="og:site_name" content="Scarred&#39;s Blog">
-<meta property="og:description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefaults">
-<meta property="og:updated_time" content="2017-06-24T18:18:05.000Z">
+<meta property="og:description" content="&amp;lt;–! 之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserD">
+<meta property="og:updated_time" content="2017-06-24T18:52:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于之前ios的面试">
-<meta name="twitter:description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefaults">
+<meta name="twitter:description" content="&amp;lt;–! 之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserD">
 
 
 
@@ -378,9 +378,9 @@
       
 
       
-        <p>之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。</p>
+        <p>&lt;–! 之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。</p>
 <h4 id="NSUserDefaults支持的数据类型"><a href="#NSUserDefaults支持的数据类型" class="headerlink" title="NSUserDefaults支持的数据类型"></a>NSUserDefaults支持的数据类型</h4><p>有：NSNumber（NSInteger、float、double），NSString，NSDate，NSArray，NSDictionary，BOOL.</p>
-<p>如何将上述的数据类型保存到NSUserDefaults中，只需要（一个Value一个Key）,比如想要保存一个NSString的对象，代码实现为：</p>
+<p>如何将上述的数据类型保存到NSUserDefaults中，只需要（一个Value一个Key）,比如想要保存一个NSString的对象，代码实现为：–&gt;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">NSString * str = = @&quot;123&quot;;</div><div class="line">NSUserDefaults *user = [NSUserDefaults standarUserDefaults];</div><div class="line">[user setObject:str forKey:@&quot;userstr&quot;];</div><div class="line"></div></pre></td></tr></table></figure>
 <p>提取数据只需要提取key对应的值就行了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NSUserDefaults *user = [NSUserDefaults standardUserDefaults];</div><div class="line">NSString *str = [user objectForKey:@&quot;userstr&quot;];</div></pre></td></tr></table></figure></p>
 <p>#####注意的是： NSUserDefaults 存储的对象全是不可变的（这一点非常关键）<br>例如，如果我想要存储一个 NSMutableArray (可变数组)对象，我必须先创建一个不可变数组（NSArray）再将它存入NSUserDefaults中去，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">NSMutableArray *nsmArray =[NSMutableArray arrayWithObjedcts:@&quot;12&quot;,@&quot;23&quot;,nil];</div><div class="line">NSArray *array = [NSArray arrayWithArray:nsmArray];</div><div class="line"></div><div class="line">NSUserDefaults *user = [NSUserDefaults standarUserDefaults];</div><div class="line">[user setObject:array forKey:@&quot;不可变&quot;]；</div><div class="line"></div></pre></td></tr></table></figure></p>
