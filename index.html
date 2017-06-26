@@ -365,7 +365,7 @@
 
       
         
-          <p>####JDBC访问数据库</p>
+          <p>###JDBC访问数据库</p>
 <p>java数据库连接（JDBC）用于在java中实现数据库操作的功能，它提供了执行SQL语句，访问各种数据库的方法，并且为各种不同的数据库提供统一的操作接口，java.sql包中包含了JDBC操作数据库的所以类。通过JDBC访问数据库一般有如下几个步骤：<br><em>1. 加载JDBC驱动器。将数据库的JDBC驱动加载到classpath中，在基于JavaEE的web应用开发过程中，通常要把目标数据库产品的JDBC驱动复制到WEB-INF/lib下。
 </em>2. 加载JDBC驱动，并将其注册到DriverManager中。一般使用反射Class.forName(String driveName)。<br><em>3. 建立数据库连接，取得Connection对象。一般通过DriverManager.getConnection(url,username,password)方法实现，其中，url表示数据库连接字符串，username表示连接数据库的用户名，password表示连接数据库的密码。<br>
           <!--noindex-->
