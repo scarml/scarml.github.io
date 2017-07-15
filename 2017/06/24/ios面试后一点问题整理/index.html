@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefault">
+<meta name="description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefaults">
 <meta name="keywords" content="ios">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于之前ios的面试">
 <meta property="og:url" content="http://yoursite.com/2017/06/24/ios面试后一点问题整理/index.html">
 <meta property="og:site_name" content="Scarred&#39;s Blog">
-<meta property="og:description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefault">
-<meta property="og:updated_time" content="2017-06-26T18:03:54.000Z">
+<meta property="og:description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefaults">
+<meta property="og:updated_time" content="2017-07-15T06:06:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于之前ios的面试">
-<meta name="twitter:description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefault">
+<meta name="twitter:description" content="之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。 NSUserDefaults">
 
 
 
@@ -378,7 +378,7 @@
       
 
       
-        <p> 之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。</p>
+        <p>之前面试一家的IOS，面试官跟我谈了一些毕业设计上的问题。主要关于注册登录这块，讨论了一下NSUserDefaults的应用，我一开始也打算用NSUserDefaults实现这个功能的。但是没有后台交互，不好实现注册这个功能。只能创建数组，存储一定的数据。只好用SQLite数据库来实现。顺便还可以存储一些评论信息等。下面整理一下关于NSUserDefaults的用法。</p>
 <h4 id="NSUserDefaults支持的数据类型"><a href="#NSUserDefaults支持的数据类型" class="headerlink" title="NSUserDefaults支持的数据类型"></a>NSUserDefaults支持的数据类型</h4><p>有：NSNumber（NSInteger、float、double），NSString，NSDate，NSArray，NSDictionary，BOOL.<br><a id="more"></a><br>如何将上述的数据类型保存到NSUserDefaults中，只需要（一个Value一个Key）,比如想要保存一个NSString的对象，代码实现为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">NSString * str = = @&quot;123&quot;;</div><div class="line">NSUserDefaults *user = [NSUserDefaults standarUserDefaults];</div><div class="line">[user setObject:str forKey:@&quot;userstr&quot;];</div><div class="line"></div></pre></td></tr></table></figure>
 <p>提取数据只需要提取key对应的值就行了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NSUserDefaults *user = [NSUserDefaults standardUserDefaults];</div><div class="line">NSString *str = [user objectForKey:@&quot;userstr&quot;];</div></pre></td></tr></table></figure></p>
@@ -426,10 +426,6 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/06/21/Myfirst/" rel="next" title="My First Blog">
-                <i class="fa fa-chevron-left"></i> My First Blog
-              </a>
             
           </div>
 
@@ -511,7 +507,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -522,7 +518,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -533,7 +529,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
